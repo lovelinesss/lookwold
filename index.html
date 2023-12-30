@@ -3,7 +3,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 function checkPassword() {
-  var password = prompt("请输入密码，关注xxx", "关注xxx");
+  var password = prompt("关注公众号：新视影像，输入“免费” 获取", "");
   if (password == "9527") {
     alert("密码正确，欢迎访问");
     showQRCode();
@@ -41,17 +41,16 @@ function showQRCode() {
 </style>
 </head>
 <body onload="checkPassword()">
-<h1>这是我的网页</h1>
-<p>这是一个简单的网页，需要密码才能访问。</p>
+<h1></h1>
+<p>用小火箭扫一扫。</p>
 <div class="picture-container">
 <div class="qrcode" id="qrcode1"></div>
 <div class="qrcode" id="qrcode2"></div>
 <div class="qrcode" id="qrcode3"></div>
 </div>
 <script>
-// 生成三个固定的二维码，内容为你指定或者我生成的字符串
 new QRCode(document.getElementById("qrcode1"), {
-  text: "你想要的内容1", // 你可以在这里修改内容
+  text: "ssr://engwMS5lbmRoaWdoLnh5ejoyNDAyOmF1dGhfYWVzMTI4X3NoYTE6Y2hhY2hhMjAtaWV0ZjpwbGFpbjpha1poTkVZeC8_cmVtYXJrcz01TGl0NkwyczZJcUM1NEs1TFRFNExqRTRUVUl2Y3kwNU5EYzJNakV3TWpnJnByb3RvcGFyYW09TkRZNU5qRTZNVEl4TUMxVWFHRSZvYmZzcGFyYW09TldRelpXVTBOamsyTVM1dGFXTnliM052Wm5RdVkyOXQ", // 你可以在这里修改内容
   width: 300,
   height: 300,
   colorDark : "#000000",
@@ -59,7 +58,7 @@ new QRCode(document.getElementById("qrcode1"), {
   correctLevel : QRCode.CorrectLevel.H
 });
 new QRCode(document.getElementById("qrcode2"), {
-  text: "你想要的内容2", // 你可以在这里修改内容
+  text: "ssr://Y20wMy5uZXdjb21lLnh5ejo2NzA1OmF1dGhfYWVzMTI4X3NoYTE6Y2hhY2hhMjAtaWV0ZjpwbGFpbjpha1poTkVZeC8_cmVtYXJrcz01TGl0NkwyczZJcUM1NEs1TFRRdU5qUk5RaTl6TFRNeU16RXhNVEF3TkRrJnByb3RvcGFyYW09TkRZNU5qRTZNVEl4TUMxVWFHRSZvYmZzcGFyYW09TldRelpXVTBOamsyTVM1dGFXTnliM052Wm5RdVkyOXQ", // 你可以在这里修改内容
   width: 300,
   height: 300,
   colorDark : "#000000",
@@ -67,7 +66,7 @@ new QRCode(document.getElementById("qrcode2"), {
   correctLevel : QRCode.CorrectLevel.H
 });
 new QRCode(document.getElementById("qrcode3"), {
-  text: "你想要的内容3", // 你可以在这里修改内容
+  text: "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphZTQxODQ5Ny1jNmJlLTQ0YzEtOTQxNi03YTIxZjllNDQwNzBAeWQucWlhbmdnZXdhbmdsdW8uYnV6ejoxMDgwOQ#%E6%97%A5%E6%9C%AC%7C%E6%B7%B1%E6%B8%AF%E9%9A%A7%E9%81%93%7CNETFLIX-1939842949", // 你可以在这里修改内容
   width: 300,
   height: 300,
   colorDark : "#000000",
