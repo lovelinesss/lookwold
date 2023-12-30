@@ -1,34 +1,41 @@
 <html>
 <head>
+<script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 function checkPassword() {
   var password = prompt("请输入密码", "");
   if (password == "9527") {
     alert("密码正确，欢迎访问");
-    showImages();
+    showQRCode();
   } else {
     alert("密码错误，无法访问");
     window.location.reload();
   }
 }
-function showImages() {
-  var images = document.getElementsByTagName("img");
-  for (var i = 0; i < images.length; i++) {
-    images[i].style.display = "block";
+function showQRCode() {
+  var qrcode = document.getElementsByClassName("qrcode");
+  for (var i = 0; i < qrcode.length; i++) {
+    qrcode[i].style.display = "block";
   }
 }
 </script>
 <style>
-img {
+.qrcode {
   display: none;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
 }
 .picture-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (max-width: 480px) {
-  .picture-container {
-    flex-direction: column;
+  .qrcode {
+    width: 200px;
+    height: 200px;
   }
 }
 </style>
@@ -37,9 +44,37 @@ img {
 <h1>这是我的网页</h1>
 <p>这是一个简单的网页，需要密码才能访问。</p>
 <div class="picture-container">
-<img src="https://i.imgur.com/1.jpg" alt="图形艺术1" width="300" height="300">
-<img src="https://i.imgur.com/2.jpg" alt="图形艺术2" width="300" height="300">
-<img src="https://i.imgur.com/3.jpg" alt="图形艺术3" width="300" height="300">
+<div class="qrcode" id="qrcode1"></div>
+<div class="qrcode" id="qrcode2"></div>
+<div class="qrcode" id="qrcode3"></div>
 </div>
+<script>
+// 生成三个固定的二维码，内容为你指定或者我生成的字符串
+new QRCode(document.getElementById("qrcode1"), {
+  text: "你想要的内容1", // 你可以在这里修改内容
+  width: 300,
+  height: 300,
+  colorDark : "#000000",
+  colorLight : "#ffffff",
+  correctLevel : QRCode.CorrectLevel.H
+});
+new QRCode(document.getElementById("qrcode2"), {
+  text: "你想要的内容2", // 你可以在这里修改内容
+  width: 300,
+  height: 300,
+  colorDark : "#000000",
+  colorLight : "#ffffff",
+  correctLevel : QRCode.CorrectLevel.H
+});
+new QRCode(document.getElementById("qrcode3"), {
+  text: "你想要的内容3", // 你可以在这里修改内容
+  width: 300,
+  height: 300,
+  colorDark : "#000000",
+  colorLight : "#ffffff",
+  correctLevel : QRCode.CorrectLevel.H
+});
+</script>
 </body>
 </html>
+
