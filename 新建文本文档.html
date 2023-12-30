@@ -1,0 +1,45 @@
+<html>
+<head>
+<script>
+function checkPassword() {
+  var password = prompt("请输入密码", "");
+  if (password == "9527") {
+    alert("密码正确，欢迎访问");
+    showImages();
+  } else {
+    alert("密码错误，无法访问");
+    window.location.reload();
+  }
+}
+function showImages() {
+  var images = document.getElementsByTagName("img");
+  for (var i = 0; i < images.length; i++) {
+    images[i].style.display = "block";
+  }
+}
+</script>
+<style>
+img {
+  display: none;
+}
+.picture-container {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 480px) {
+  .picture-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body onload="checkPassword()">
+<h1>这是我的网页</h1>
+<p>这是一个简单的网页，需要密码才能访问。</p>
+<div class="picture-container">
+<img src="https://i.imgur.com/1.jpg" alt="图形艺术1" width="300" height="300">
+<img src="https://i.imgur.com/2.jpg" alt="图形艺术2" width="300" height="300">
+<img src="https://i.imgur.com/3.jpg" alt="图形艺术3" width="300" height="300">
+</div>
+</body>
+</html>
